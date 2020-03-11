@@ -28,7 +28,7 @@ public class AddStudentHomeworkServlet extends HttpServlet {
         /**
          * 赋值
          */
-        sh.setStudentId(Long.getLong(req.getParameter("student_id")));
+        sh.setStudentId(Long.valueOf(req.getParameter("student_id")));
         StudentHomeworkJdbc.addStudentHomework(sh);
 
         resp.sendRedirect("list");
